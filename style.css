@@ -121,7 +121,7 @@ body.dark-mode footer {
 
 
 body.dark-mode {
-  background: #121212;
+  background: #000;
   color: #e0e0e0;
 }
 
@@ -426,8 +426,8 @@ body.dark-mode #education {
   background: #2c6db8;
   border-radius: 50%;
   position: absolute;
-  left: -13px;
-  top: .5px;
+  left: -19px;
+  top: 0.3px;
   border: 2px solid #fff;
 }
 
@@ -464,5 +464,32 @@ body.dark-mode .timeline-content {
   color: #fff;
 }
 
+.uni img {
+  width: 360px;   
+  height: auto;   
+  display: block;
+  margin: 0 auto; 
+}
+.typing {
+  display: inline-block;
+  overflow: hidden;          
+  white-space: nowrap;       
+  width: 0;              
+  animation: typing 4s steps(30, end) forwards;
+  background: linear-gradient(95deg,#132453,#000,#132453, #000,#132453);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+body.dark-mode .typing{
+  background: linear-gradient(90deg, #3a7bd5,#5a2a8c,#ffffff, #3a5dbd, #5a2a8c,#ffffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+/* أنيميشن الكتابة */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
 
 

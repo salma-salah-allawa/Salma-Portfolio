@@ -465,6 +465,10 @@ body.dark-mode .timeline-content {
 }
 
 .uni img {
+  display: none;
+}
+
+body.dark-mode .uni img {
   width: 360px;   
   height: auto;   
   display: block;

@@ -216,31 +216,68 @@
     </div>
   </section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="page">
-    <h1>Contact</h1>
-    <br>
-    <h3 class="contact-msg">Feel free to reach out — I’d love to connect and collaborate🤍.</h3>
-    <br>
-    <p><i class="fas fa-envelope"></i> 
-     <strong>Email:</strong> 
-     <a href="mailto:salma.salah182001@gmail.com">salma.salah182001@gmail.com</a>
-  </p>
-  
-  <p><i class="fab fa-linkedin"></i> 
-     <strong>LinkedIn:</strong> 
-     <a href="https://www.linkedin.com/in/salma-salah-40315b317/" target="_blank">linkedin.com/in/salma-salah</a>
-  </p>
-  
-  <p><i class="fab fa-github"></i> 
-     <strong>GitHub:</strong> 
-     <a href="https://github.com/salma-salah-allawa" target="_blank">github.com/salma-salah-allawa</a>
-  </p>
-  
-  <p><i class="fas fa-phone"></i> 
-     <strong>Phone:</strong> 01025109119
-  </p>
-  </section>
+
+<section id="insights" class="insights-section">
+  <div class="insights-container">
+    <p class="headermsg">I’m committed to continuous growth, always learning new technologies and frameworks to enhance my work and adapt to the fast-evolving world of development.</p>
+    <div class="insight-box">
+      <h2><span class="count">1</span>+</h2>
+      <p>Years of Experience</p>
+    </div>
+    <div class="insight-box">
+       <h2><span class="count" >5</span>+</h2>
+      <p>Completed Projects</p>
+    </div>
+    <div class="insight-box">
+       <h2><span class="count" >20</span>+</h2>
+      <p>Skills Learned</p>
+    </div>
+    <div class="insight-box">
+       <h2><span class="count" >7</span>+</h2>
+      <p>Technologies</p>
+    </div>
+  </div>
+</section>
+
+
+
+<section id="contact" class="page contact-section">
+  <h1>Get In Touch</h1>
+  <h3 class="contact-msg">Feel free to reach out — I’d love to connect and collaborate 🤍.</h3>
+
+  <div class="contact-container">
+    <!-- Contact Info -->
+    <div class="contact-info">
+      <p><i class="fas fa-envelope"></i> 
+        <strong>Email:</strong> 
+        <a href="mailto:salma.salah182001@gmail.com">salma.salah182001@gmail.com</a>
+      </p><br>
+      <p><i class="fab fa-linkedin"></i> 
+        <strong>LinkedIn:</strong> 
+        <a href="https://www.linkedin.com/in/salma-salah-40315b317/" target="_blank">linkedin.com/in/salma-salah</a>
+      </p><br>
+      <p><i class="fab fa-github"></i> 
+        <strong>GitHub:</strong> 
+        <a href="https://github.com/salma-salah-allawa" target="_blank">github.com/salma-salah-allawa</a>
+      </p><br>
+      <p><i class="fas fa-phone"></i> 
+        <strong>Phone:</strong> 01025109119
+      </p>
+    </div>
+
+    <!-- Contact Form -->
+    <div class="contact-form">
+      <h2 class="form-title">Send Me a Message</h2>
+      <form>
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" rows="5" placeholder="Leave a message..." required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </div>
+</section>
+
 
   <footer>
     <p>© 2025 Salma Salah Aallwa. All Rights Reserved.</p>
@@ -258,8 +295,19 @@
         toggleBtn.textContent = "🌙";
       }
     });
+     const sections = document.querySelectorAll('.page');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+      }
+    });
+  }, { threshold: 0.2 }); 
+  
+  sections.forEach(section => {
+    observer.observe(section);
+  });
   </script>
 </body>
 </html>
-
-
